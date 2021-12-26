@@ -6,7 +6,7 @@ using Reactor;
 
 namespace PluginName
 {
-    [BepInAutoPlugin("gg.reactor.Example")]
+    [BepInAutoPlugin("me.unknown.PluginName")]
     [BepInProcess("Among Us.exe")]
     [BepInDependency(ReactorPlugin.Id)]
     public partial class PluginNamePlugin : BasePlugin
