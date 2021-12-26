@@ -11,6 +11,8 @@ namespace PluginName
     [BepInDependency(ReactorPlugin.Id)]
     public partial class PluginNamePlugin : BasePlugin
     {
+        public Harmony Harmony { get; } = new(Id);
+        
         public override void Load()
         {
             Harmony.PatchAll();
