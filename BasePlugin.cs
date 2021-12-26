@@ -4,17 +4,16 @@ using BepInEx.IL2CPP;
 using HarmonyLib;
 using Reactor;
 
-namespace PluginName;
-
-[BepInAutoPlugin]
-[BepInProcess("Among Us.exe")]
-[BepInDependency(ReactorPlugin.Id)]
-public partial class PluginNamePlugin : BasePlugin
+namespace PluginName
 {
-    public Harmony Harmony { get; } = new(Id);
-
-    public override void Load()
+    [BepInAutoPlugin("gg.reactor.Example")]
+    [BepInProcess("Among Us.exe")]
+    [BepInDependency(ReactorPlugin.Id)]
+    public partial class PluginNamePlugin : BasePlugin
     {
-        Harmony.PatchAll();
+        public override void Load()
+        {
+            Harmony.PatchAll();
+        }
     }
 }
